@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8cnos6m6uq53"]
+
+[ext_resource type="Script" path="res://Effects/BorderFollowSquares/BorderFollowSquare.gd" id="1_bs4p5"]
+
+[node name="BorderFollowSquare" type="Node2D"]
+script = ExtResource("1_bs4p5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 1224.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 56.0

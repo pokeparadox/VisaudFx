@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://j6nwohws8dxe"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_fa5mk"]
+[ext_resource type="PackedScene" uid="uid://dqntcd0igibuh" path="res://Effects/Effects.tscn" id="2_1k0ns"]
+[ext_resource type="AudioStream" uid="uid://bw538lwljnoxh" path="res://track.ogg" id="2_jlpmq"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_fa5mk")
+bpm = 140.0
+
+[node name="Effects" parent="." instance=ExtResource("2_1k0ns")]
+
+[node name="Track" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_jlpmq")
+
+[connection signal="bar_completed" from="." to="Effects" method="_on_main_bar_completed"]
+[connection signal="beat_completed" from="." to="Effects" method="_on_main_beat_completed"]
+[connection signal="finished" from="Track" to="." method="_on_track_finished"]

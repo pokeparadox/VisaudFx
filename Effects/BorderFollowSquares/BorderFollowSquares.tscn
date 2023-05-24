@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://xngcexsca088"]
+
+[ext_resource type="Script" path="res://Effects/BorderFollowSquares/BorderFollowSquares.gd" id="1_53e3d"]
+
+[node name="BorderFollowSquares" type="Node2D"]
+script = ExtResource("1_53e3d")

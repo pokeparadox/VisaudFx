@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://ngvpanc7v1dc"]
+
+[ext_resource type="Script" path="res://Effects/PirateDvd/PirateDvd.gd" id="1_8d1f5"]
+[ext_resource type="Texture2D" uid="uid://b5d1f4nmhkysv" path="res://Effects/Images/pirategames.png" id="1_33xt4"]
+
+[sub_resource type="Gradient" id="Gradient_0tbob"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tnasg"]
+gradient = SubResource("Gradient_0tbob")
+
+[sub_resource type="Curve" id="Curve_0dq7v"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0727272), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7ibsn"]
+curve = SubResource("Curve_0dq7v")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5ftod"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_curve = SubResource("CurveTexture_7ibsn")
+color_ramp = SubResource("GradientTexture1D_tnasg")
+
+[node name="PirateDvd" type="Node2D"]
+script = ExtResource("1_8d1f5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(640, 320)
+texture = ExtResource("1_33xt4")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Sprite2D"]
+process_material = SubResource("ParticleProcessMaterial_5ftod")
+texture = ExtResource("1_33xt4")
