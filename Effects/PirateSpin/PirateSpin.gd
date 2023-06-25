@@ -30,5 +30,5 @@ func _physics_process(delta):
 func set_max_scale(sc : float):
 	max_scale = sc
 
-func spin(spin : float):
-	burst_speed = spin
+func spin(s : float):
+	burst_speed = s

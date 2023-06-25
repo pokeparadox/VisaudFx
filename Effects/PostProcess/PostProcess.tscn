@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://byfbrgh0sut1s"]
+
+[ext_resource type="Script" path="res://Effects/PostProcess/PostProcess.gd" id="1_vb0j4"]
+[ext_resource type="Shader" path="res://Effects/PostProcess/Shaders/Pixelise.gdshader" id="2_b4ec4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cuwgr"]
+shader = ExtResource("2_b4ec4")
+shader_parameter/size_x = 0.01
+shader_parameter/size_y = 0.01
+
+[node name="PostProcess" type="Node2D"]
+script = ExtResource("1_vb0j4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_cuwgr")
+offset_right = 1280.0
+offset_bottom = 721.0

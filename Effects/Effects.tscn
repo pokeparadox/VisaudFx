@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqntcd0igibuh"]
+[gd_scene load_steps=9 format=3 uid="uid://dqntcd0igibuh"]
 
 [ext_resource type="Script" path="res://Effects/Effects.gd" id="1_0maor"]
 [ext_resource type="PackedScene" uid="uid://bstfae5ojldgk" path="res://Effects/Flash/Flash.tscn" id="1_5wfe0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ngvpanc7v1dc" path="res://Effects/PirateDvd/PirateDvd.tscn" id="6_4xbew"]
 [ext_resource type="PackedScene" uid="uid://m7bcgrtmfxdk" path="res://Effects/PirateSpin/PirateSpin.tscn" id="6_oovk1"]
 [ext_resource type="PackedScene" uid="uid://xngcexsca088" path="res://Effects/BorderFollowSquares/BorderFollowSquares.tscn" id="7_o82xt"]
+[ext_resource type="PackedScene" uid="uid://byfbrgh0sut1s" path="res://Effects/PostProcess/PostProcess.tscn" id="8_448pb"]
 
 [node name="Effects" type="Node2D"]
 script = ExtResource("1_0maor")
@@ -23,3 +24,6 @@ position = Vector2(24, 0)
 [node name="PirateDvd" parent="." instance=ExtResource("6_4xbew")]
 
 [node name="BorderFollowSquares" parent="." instance=ExtResource("7_o82xt")]
+
+[node name="PostProcess" parent="." instance=ExtResource("8_448pb")]
+top_level = true
